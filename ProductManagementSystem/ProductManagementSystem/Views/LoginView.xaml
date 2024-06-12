@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="ProductManagementSystem.Views.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProductManagementSystem.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="520" d:DesignWidth="520" Background="Black">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" BorderThickness="3" BorderBrush="White" Margin="50,10,50,10">
+            <TextBlock
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Grid.Row="0"
+                Text="Product Management System"
+                Foreground="white"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="30"/>
+        </Border>
+
+        <Border Grid.Column="0" Grid.Row="1" BorderThickness="3" BorderBrush="White" Margin="50,10,50,10">
+            <TextBlock
+                Grid.Column="0"
+                Grid.Row="1"
+                Text="Server Location"
+                Foreground="white"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontSize="20"/>
+        </Border>
+
+        <Border Grid.Column="0" Grid.Row="2" BorderThickness="3" BorderBrush="White" Margin="50,10,50,10">
+            <TextBlock
+                Grid.Column="0"
+                Grid.Row="2"
+                Text="Database Name"
+                Foreground="white"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontSize="20"/>
+        </Border>
+
+        <Border Grid.Column="0" Grid.Row="3" BorderThickness="3" BorderBrush="White" Margin="50,10,50,10">
+            <TextBlock
+                Grid.Column="0"
+                Grid.Row="3"
+                Text="UserName"
+                Foreground="white"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontSize="20"/>
+        </Border>
+
+        <Border Grid.Column="0" Grid.Row="4" BorderThickness="3" BorderBrush="White" Margin="50,10,50,10">
+            <TextBlock
+                Grid.Column="0"
+                Grid.Row="4"
+                Text="Password"
+                Foreground="white"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontSize="20"/>
+        </Border>
+
+        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" Content="Connect" Command="{Binding ConnectCommand}"/>
+
+        <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding ServerLocation}"/>
+        <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding DBName}"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding UserName}"/>
+        <PasswordBox Grid.Column="1" Grid.Row="4" />
+
+    </Grid>
+</UserControl>
